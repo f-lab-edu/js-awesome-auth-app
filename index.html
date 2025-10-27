@@ -1,0 +1,35 @@
+<!-- 회원가입/로그인 창 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인창</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--     
+    크게 폼으로 감싼 뒤
+    이메일 인풋칸
+    비밀번호 인풋칸
+    로긴버튼 (Sign in / Next)
+    닫기버튼
+    회원가입버튼 -->
+    <div class="form-wrap">
+      <form id="sign-in">
+        <div class="row">
+          <input type="email" id="email" placeholder="Email" />
+        </div>
+        <div class="row">
+          <input type="password" id="password" placeholder="Password" />
+          <button type="button" id="pw-toggle">👁️</button>
+        </div>
+        <div class="row">
+          <button>Sign in</button>
+          <button>Cancel</button>
+          <button>Create account</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
