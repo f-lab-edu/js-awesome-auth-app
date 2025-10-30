@@ -35,7 +35,7 @@ class Auth {
     // const token = Math.floor(Math.random() * 10 * 10 ** 5); //중복문제는 어찌 해결?
     const token = crypto.randomUUID(); //UUID = Universally Unique Identifier
     //생성한 토큰을 tokenSessions에 저장
-    this.users.set(token, email);
+    this.tokenSessions.set(token, email);
     return { ok: true, token, user: { email } }; // 성공시 (이걸 나중으로 빼자)
   }
 
