@@ -72,12 +72,11 @@ const login = auth.signIn("a@ex.com", "1234");
 console.log(login);
 // { ok: true, token: 'a93f1c...', user: { email: 'a@ex.com' } }
 
-/*
-console.log(auth.verify(login.token));
+// console.log(auth.verify(login.token));
 // { ok: true, user: { email: 'a@ex.com' } }
 
-  console.log(auth.signOut(login.token));
-  // { ok: true }
+console.log(auth.signOut(login.token));
+// { ok: true }
 
 console.log(auth.verify(login.token));
 // { ok: false, reason: 'INVALID_TOKEN' } */
