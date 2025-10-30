@@ -78,5 +78,5 @@ console.log(login);
 console.log(auth.signOut(login.token));
 // { ok: true }
 
-console.log(auth.verify(login.token));
+// console.log(auth.verify(login.token));
 // { ok: false, reason: 'INVALID_TOKEN' } */
