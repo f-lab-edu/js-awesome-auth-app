@@ -41,10 +41,14 @@ class Auth {
 
   signOut(token) {
     // TODO
-    // 성공시
-    return { ok: true };
+    //signOut버튼을 누르면
     // 실패시 - 즉, 토큰이 존재 하지 않으면
-    return { ok: false, reason: "INVALID_TOKEN" };
+    // 성공시
+    //tokenSessions의 해당키-값 삭제하고
+    if (!this.tokenSessions.has(token))
+      return { ok: false, reason: "INVALID_TOKEN" };
+    this.tokenSessions.delete(token);
+    return { ok: true };
   }
 
   verify(token) {
@@ -72,8 +76,8 @@ console.log(login);
 console.log(auth.verify(login.token));
 // { ok: true, user: { email: 'a@ex.com' } }
 
-console.log(auth.signOut(login.token));
-// { ok: true }
+  console.log(auth.signOut(login.token));
+  // { ok: true }
 
 console.log(auth.verify(login.token));
 // { ok: false, reason: 'INVALID_TOKEN' } */
