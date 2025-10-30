@@ -28,11 +28,12 @@ class Auth {
     //만약 아이디가 없다면?
     if (!this.users.has(email)) return { ok: false, reason: "INVALID_EMAIL" };
     //만약 아이디는 있는데, 비밀번호가 다르다면?
-    else if (password !== this.users.get(email))
+    if (password !== this.users.get(email))
       return { ok: false, reason: "INVALID_PASSWORD" }; // 혹은 INVALID_EMAIL
     // 성공시
     //토큰생성 (Math.random() * 10는 0~9 사이 숫자)(6자리수)
-    const token = Math.floor(Math.random() * 10 * 10 ** 5);
+    // const token = Math.floor(Math.random() * 10 * 10 ** 5); //중복문제는 어찌 해결?
+    const token = crypto.randomUUID(); //UUID = Universally Unique Identifier
     //생성한 토큰을 tokenSessions에 저장
     this.users.set(token, email);
     return { ok: true, token, user: { email } }; // 성공시 (이걸 나중으로 빼자)
