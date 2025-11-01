@@ -52,8 +52,10 @@ class Auth {
   }
 
   verify(token) {
+    //현재 토큰(세션)이 유효한지 유무를 검사.
     // 성공시
-    return { ok: true, user: { email } };
+    //만약 토큰이 존재한다면
+    if (this.tokenSessions.has(token)) return { ok: true, user: { email } };
     // 실패시 - 즉, 토근 존재하지 않으면
     return { ok: false, reason: "INVALID_TOKEN" };
   }
