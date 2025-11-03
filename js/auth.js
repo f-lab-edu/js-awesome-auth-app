@@ -64,12 +64,9 @@ class Auth {
 
 const auth = new Auth();
 
-console.log(auth.signUp("a@ex.com", "1234"));
-// { ok: true }
+console.log(auth.signUp("a@ex.com", "1234")); // { ok: true }
 
-console.log(auth.signUp("a@ex.com", "xxxx"));
-// { ok: false, reason: "EMAIL_TAKEN" }
-// 이메일이 이미 존재 하니까
+console.log(auth.signUp("a@ex.com", "xxxx")); // { ok: false, reason: "EMAIL_TAKEN" }// 이메일이 이미 존재 하니까
 
 const login = auth.signIn("a@ex.com", "1234");
 console.log(login);
