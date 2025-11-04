@@ -54,7 +54,7 @@ class Auth {
   verify(token) {
     const email = this.tokenSessions.get(token);
     //현재 토큰(세션)이 유효한지 유무를 검사.
-    // 성공시
+    //성공시
     //만약 토큰이 존재한다면
     if (this.tokenSessions.has(token)) return { ok: true, user: { email } };
     // 실패시 - 즉, 토근 존재하지 않으면
@@ -62,10 +62,10 @@ class Auth {
   }
 }
 
-const auth = new Auth();
+const authTest = new Auth();
 
-console.log(auth.signUp("a@ex.com", "1234")); // { ok: true }
-
+console.log(authTest.signUp("a@ex.com", "1234")); // { ok: true }
+/*
 console.log(auth.signUp("a@ex.com", "xxxx")); // { ok: false, reason: "EMAIL_TAKEN" }// 이메일이 이미 존재 하니까
 
 const login = auth.signIn("a@ex.com", "1234");
@@ -80,3 +80,4 @@ console.log(auth.signOut(login.token));
 
 console.log(auth.verify(login.token));
 // { ok: false, reason: 'INVALID_TOKEN' }
+ */
