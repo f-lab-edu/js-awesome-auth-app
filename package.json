@@ -1,0 +1,14 @@
+{
+  "name": "-y",
+  "version": "1.0.0",
+  "description": "- Sign-up\r - Sign-in (login)\r   - success: true\r   - message → email: INVALID_EMAIL , password: INVALID_PASSWORD\r - Sign-out",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
