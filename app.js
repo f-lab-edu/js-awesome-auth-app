@@ -8,16 +8,16 @@ app.get("/", (req, res) => {
 });
 
 //Postman- API 테스트
-app.post("/login", (req, res) => {
-  res.send("Logged in!");
-});
-
 app.post("/signup", (req, res) => {
-  res.send("Signed up!");
+  res.send("Sign up!!! 가입완료");
 });
 
-app.post("/logout", (req, res) => {
-  res.send("Logged out!");
+app.post("/signin", (req, res) => {
+  res.send("Sign in! 로그인완료");
+});
+
+app.post("/signout", (req, res) => {
+  res.send("Sign out! 로그아웃");
 }); //테스트 끝
 
 app.listen(port, () => {
