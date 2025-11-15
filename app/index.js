@@ -9,7 +9,10 @@ app.get("/", (req, res) => {
 
 //Postman- API 테스트
 app.post("/signup", (req, res) => {
-  res.send("Sign up!!! 가입완료");
+  res.json({ ok: true }); //뒤에있는 얘를 json 포멧으로 바꾼다.  postman에서 볼 수 있음.
+  //send를 다 json으로 바꿔주는게 좋다.
+  //다음번까지 다 구현해오기
+  //
 });
 
 app.post("/signin", (req, res) => {
